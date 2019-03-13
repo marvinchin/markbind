@@ -60,12 +60,13 @@
     "url": "https://github.com/MarkBind/markbind.git"
   },
   "scripts": {
+    "jest": "jest",
     "lint": "./node_modules/.bin/eslint .",
     "pretest": "npm run lint",
     "pretestwin": "npm run lint",
     "testwin": "jest && cd test/functional && test.bat",
     "test": "jest && cd test/functional && ./test.sh",
-    "jest": "jest"
+    "update-test-site": "cd test/functional/test_site && rm -rf expected && cp -r _site expected"
   },
   "jest": {
     "testPathIgnorePatterns": [
